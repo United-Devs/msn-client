@@ -16,29 +16,30 @@ const Login = () => {
         mb="30px"
       />
 
-      <Text fontSize="24px" fontWeight="bold" lineHeight="24px" mb="24px">
+      <Text fontSize="2.4rem" fontWeight="bold" lineHeight="2.4rem" mb="24px">
         Welcome back!
       </Text>
 
-      <Text fontSize="14px" fontWeight="bold" lineHeight="24px">
+      <Text fontSize="1.4rem" fontWeight="bold">
         E-mail
       </Text>
       <Input
         placeholder="Type your e-mail"
         border="transparent"
-        fontSize="14px"
+        fontSize="1.4rem"
         padding="16px 24px"
         backgroundColor="#EDF3F5"
         height="48px"
         borderRadius="30px"
       />
-      <Text fontSize="14px" fontWeight="bold" lineHeight="24px">
+
+      <Text fontSize="1.4rem" fontWeight="bold">
         Password
       </Text>
       <Input
         placeholder="Type your password"
         border="transparent"
-        fontSize="14px"
+        fontSize="1.4rem"
         padding="16px 24px"
         backgroundColor="#EDF3F5"
         height="48px"
@@ -46,9 +47,9 @@ const Login = () => {
       />
       <Link
         href="#"
-        fontSize="14px"
+        fontSize="1.4rem"
         fontWeight="bold"
-        lineHeight="24px"
+        lineHeight="2.4rem"
         color="#005683"
         mt="16px"
       >
@@ -61,15 +62,15 @@ const Login = () => {
         size="lg"
         backgroundColor="#005683"
         width="100%"
-        fontSize="14px"
+        fontSize="1.4rem"
         padding="16px 24px"
         mt="24px"
       >
         Log in
       </Button>
       <Text
-        fontSize="14px"
-        lineHeight="24px"
+        fontSize="1.4rem"
+        lineHeight="2.4rem"
         mt="70px"
         display="flex"
         alignSelf="center"
@@ -77,9 +78,9 @@ const Login = () => {
         Don’t have an account?
         <Link
           href="#"
-          fontSize="14px"
+          fontSize="1.4rem"
           fontWeight="bold"
-          lineHeight="24px"
+          lineHeight="2.4rem"
           color="#005683"
           ml="4px"
         >
