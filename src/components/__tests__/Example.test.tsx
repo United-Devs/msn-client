@@ -2,7 +2,7 @@ import React from 'react'
 
 import { render, screen } from '@testing-library/react'
 
-import Example from './Example'
+import Example from '../Example'
 
 describe('<Example />', () => {
   it('should render correctly', () => {
