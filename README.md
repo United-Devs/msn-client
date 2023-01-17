@@ -1,5 +1,9 @@
 # MSN Client 💬
 
+## Figma Link
+
+[Click here](https://www.figma.com/community/file/1154918704465756658)
+
 ## Getting Started
 
 Install all dependencies:
