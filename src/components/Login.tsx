@@ -19,14 +19,14 @@ const Login = () => {
       />
 
       <Text fontSize="2.4rem" fontWeight="bold" lineHeight="2.4rem" mb="24px">
-        Welcome back!
+        Bem vindo de volta!
       </Text>
 
       <Text fontSize="1.4rem" fontWeight="bold">
         E-mail
       </Text>
       <Input
-        placeholder="Type your e-mail"
+        placeholder="Digite seu e-mail"
         border="transparent"
         fontSize="1.4rem"
         padding="16px 24px"
@@ -36,10 +36,10 @@ const Login = () => {
       />
 
       <Text fontSize="1.4rem" fontWeight="bold">
-        Password
+        Senha
       </Text>
       <Input
-        placeholder="Type your password"
+        placeholder="Digite sua senha"
         border="transparent"
         fontSize="1.4rem"
         padding="16px 24px"
@@ -55,7 +55,7 @@ const Login = () => {
         color="#005683"
         mt="16px"
       >
-        Forgot password?
+        Esqueceu a senha?
       </Link>
       <Button
         colorScheme="blue"
@@ -68,7 +68,7 @@ const Login = () => {
         padding="16px 24px"
         mt="24px"
       >
-        Log in
+        Entrar
       </Button>
       <Text
         fontSize="1.4rem"
@@ -77,7 +77,7 @@ const Login = () => {
         display="flex"
         alignSelf="center"
       >
-        Don’t have an account?
+        Não tem uma conta?
         <Link
           href="#"
           fontSize="1.4rem"
@@ -86,7 +86,7 @@ const Login = () => {
           color="#005683"
           ml="4px"
         >
-          Sign up
+          Crie uma.
         </Link>
       </Text>
     </Flex>
