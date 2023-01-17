@@ -3,11 +3,13 @@ import { Button, Flex, Input, Text, Link, Image } from '@chakra-ui/react'
 const Login = () => {
   return (
     <Flex
-      minH="100vh"
+      width="100%"
+      maxWidth="390px"
       alignItems="flex-start"
       justifyContent="center"
       flexDirection="column"
       gap="10px"
+      padding="15px"
     >
       <Image
         src="/img/msn-logo.png"
