@@ -1,6 +1,5 @@
 import { Flex } from '@chakra-ui/react'
-
-import Login from './Login'
+import Login from 'components/Login'
 
 const Main = () => {
   return (
