@@ -1,6 +1,15 @@
-import { extendTheme } from '@chakra-ui/react'
+import { defineStyleConfig, extendTheme } from '@chakra-ui/react'
+
+const Button = defineStyleConfig({
+  baseStyle: {
+    background: 'transparent'
+  }
+})
 
 const theme = extendTheme({
+  components: {
+    Button
+  },
   styles: {
     global: {
       html: {
