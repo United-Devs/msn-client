@@ -1,0 +1,22 @@
+import { Flex, VStack } from '@chakra-ui/react'
+
+export type MessagesContainerProps = {
+  children: React.ReactNode
+}
+
+const MessagesContainer = ({ children }: MessagesContainerProps) => (
+  <Flex
+    flex="1"
+    backgroundImage="/img/backgroundChat.png"
+    backgroundSize="cover"
+    backgroundPosition="center"
+    backgroundRepeat="no-repeat"
+    p="2rem"
+  >
+    <VStack w="100%" maxH="75vh" overflowY="auto">
+      {children}
+    </VStack>
+  </Flex>
+)
+
+export default MessagesContainer
