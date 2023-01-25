@@ -65,7 +65,7 @@ const ChatKeyboard = () => {
   return (
     <>
       {showEmojiKeyboard && (
-        <Box pos="absolute" bottom="7rem" w="100%">
+        <Box pos="absolute" bottom="7rem" w="100%" aria-label="Teclado Emoji">
           <EmojiPicker
             onEmojiClick={handleEmojiClick}
             autoFocusSearch={false}
