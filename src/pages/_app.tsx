@@ -2,8 +2,11 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 
 import { ChakraProvider } from '@chakra-ui/react'
+import { Inter } from '@next/font/google'
 import { ChatProvider } from 'contexts/chatContext'
 import theme from 'styles/theme'
+
+const inter = Inter({ subsets: ['latin'] })
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -17,7 +20,9 @@ function App({ Component, pageProps }: AppProps) {
 
       <ChatProvider>
         <ChakraProvider resetCSS theme={theme}>
-          <Component {...pageProps} />
+          <main className={inter.className}>
+            <Component {...pageProps} />
+          </main>
         </ChakraProvider>
       </ChatProvider>
     </>

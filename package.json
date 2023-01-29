@@ -16,6 +16,7 @@
     "@chakra-ui/react": "^2.4.8",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@next/font": "^13.1.6",
     "emoji-picker-react": "^4.4.7",
     "framer-motion": "^6",
     "next": "^13.1.1",
