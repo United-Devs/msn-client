@@ -21,13 +21,15 @@ const ChatKeyboard = () => {
     setInputValue(inputValue + emoji.emoji)
 
   const handleListeningMic = () => {
+    // prevents double call if mic is already active
+    if (listeningMic) return
+
     if (recognition) {
       recognition.onstart = () => setListeningMic(true)
-      recognition.onend = () => setListeningMic(false)
-
-      /**
-        @todo: Alinhar com o pessoal sobre qual o melhor a se fazer, depois de gravar o audio
-      */
+      recognition.onend = () => {
+        setListeningMic(false)
+        recognition.stop()
+      }
 
       recognition.onresult = (event) => {
         setShowEmojiKeyboard(false)
@@ -59,7 +61,8 @@ const ChatKeyboard = () => {
   }
 
   const handleKeyUp = (event: KeyboardEvent) => {
-    if (event.key === 'Enter') handleSendMessage()
+    const isEnterKey = event.key === 'Enter'
+    if (isEnterKey) handleSendMessage()
   }
 
   return (
