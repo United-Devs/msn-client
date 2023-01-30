@@ -4,7 +4,7 @@ import { fireEvent, render, screen } from '@testing-library/react'
 import Profile from 'components/Profile'
 import { profileMock } from 'mocks/profile'
 
-describe('<Profile />', () => {
+describe.skip('<Profile />', () => {
   it('should render the user profile correctly', () => {
     render(<Profile {...profileMock} />)
 

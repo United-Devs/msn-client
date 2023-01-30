@@ -1,9 +1,16 @@
-import { BsThreeDotsVertical } from 'react-icons/bs'
 import { IoIosArrowBack } from 'react-icons/io'
 
 import Link from 'next/link'
 
-import { Flex, Center, Icon, Text, Box } from '@chakra-ui/react'
+import {
+  Flex,
+  Center,
+  Icon,
+  Text,
+  Box,
+  Avatar,
+  Heading
+} from '@chakra-ui/react'
 
 export type ProfileProps = {
   name: string
@@ -15,55 +22,62 @@ const Profile = ({ name, status, photo }: ProfileProps) => {
   const defaultImgPath = 'img/defaultProfile.jpg'
 
   return (
-    <Flex
-      alignItems="center"
-      justifyContent="space-around"
-      h="10rem"
-      w="100%"
-      p="2rem"
-      gap="3rem"
-      bg="#FDFEFF"
-    >
-      <Link href="/">
-        <Center
-          as="button"
-          aria-label="Icone de uma seta para a esquerda"
-          w="3.2rem"
-          h="3.2rem"
-          bg="#EDF3F5"
-          borderRadius="50%"
-        >
-          <Icon as={IoIosArrowBack} w="1.6rem" h="1.6rem" color="#005683" />
-        </Center>
-      </Link>
+    <>
+      <Flex
+        justifyContent="space-between"
+        p="2.4rem 2.6rem"
+        alignItems="center"
+        bg="#FDFEFF"
+        gap="0.8rem"
+      >
+        <Flex gap="1.4rem" alignItems="center">
+          <Avatar
+            w="5.6rem"
+            h="5.6rem"
+            name={name}
+            src={photo ?? defaultImgPath}
+          />
 
-      <Flex gap="1.6rem">
-        <Box
-          role="img"
-          aria-label="Foto do usuario"
-          backgroundImage={photo ?? defaultImgPath}
-          bgPos="center"
-          bgSize="cover"
-          bgRepeat="no-repeat"
-          w="5.6rem"
-          h="5.6rem"
-          borderRadius="50%"
-        />
-
-        <Flex flexDir="column" aria-label="Informacoes do usuario">
-          <Text color="#0A0A0A" fontSize="2rem" fontWeight="bold" mb="0.2rem">
-            {name}
-          </Text>
-          <Text color="rgba(10, 10, 10, 0.5)" fontSize="1.3rem">
-            {status}
-          </Text>
+          <Flex gap="0.4rem" color="black" flexDir="column">
+            <Heading
+              fontSize="1.6rem"
+              color="#0A0A0A"
+              fontWeight={700}
+              lineHeight="2.4rem"
+            >
+              {name}
+            </Heading>
+            <Text
+              fontSize="1.2rem"
+              color="rgba(10, 10, 10, 0.5)"
+              lineHeight="2rem"
+            >
+              {status}
+            </Text>
+          </Flex>
         </Flex>
+
+        <Link href="/">
+          <Center
+            as="button"
+            aria-label="Icone de uma seta para a esquerda"
+            bg="#EDF3F5"
+            w="3.2rem"
+            h="3.2rem"
+            borderRadius="50%"
+          >
+            <Icon as={IoIosArrowBack} w="1.6rem" h="1.6rem" color="#005683" />
+          </Center>
+        </Link>
       </Flex>
 
-      <Center as="button" aria-label="Menu" w="3.2rem" h="3.2rem">
-        <Icon as={BsThreeDotsVertical} w="1.6rem" h="1.6rem" color="#005683" />
-      </Center>
-    </Flex>
+      <Box
+        w="100%"
+        h="0.1rem"
+        bg="rgba(218, 228, 232, 0.5)"
+        borderRadius="1.6rem"
+      />
+    </>
   )
 }
 
