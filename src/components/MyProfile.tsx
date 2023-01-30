@@ -6,41 +6,50 @@ const MyProfile = () => (
   <>
     <Flex
       justifyContent="space-between"
-      p="24px 26px"
+      p="2.4rem 2.6rem"
       alignItems="center"
       bg="#FDFEFF"
-      gap="8px"
+      gap="0.8rem"
       // border="1px solid rgba(218, 228, 232, 0.5)"
       // borderRadius="16px"
     >
-      <Flex gap="14px" alignItems="center">
+      <Flex gap="1.4rem" alignItems="center">
         <Avatar
-          w="56px"
-          h="56px"
+          w="5.6rem"
+          h="5.6rem"
           name="Milena Almeida"
           src="https://github.com/milealmeida.png"
         />
 
-        <Flex gap="4px" color="black" flexDir="column">
+        <Flex gap="0.4rem" color="black" flexDir="column">
           <Heading
-            fontSize="16px"
+            fontSize="1.6rem"
             color="#0A0A0A"
             fontWeight={700}
-            lineHeight="24px"
+            lineHeight="2.4rem"
           >
             Milena Almeida
           </Heading>
-          <Text fontSize="12px" color="rgba(10, 10, 10, 0.5)" lineHeight="20px">
+          <Text
+            fontSize="1.2rem"
+            color="rgba(10, 10, 10, 0.5)"
+            lineHeight="2rem"
+          >
             São tempos difíceis para as patricinhas
           </Text>
         </Flex>
       </Flex>
 
       <Flex>
-        <Icon as={FaCog} w="24px" h="24px" color="#005683" />
+        <Icon as={FaCog} w="2.4rem" h="2.4rem" color="#005683" />
       </Flex>
     </Flex>
-    <Box w="100%" h="1px" bg="rgba(218, 228, 232, 0.5)" borderRadius="16px" />
+    <Box
+      w="100%"
+      h="0.1rem"
+      bg="rgba(218, 228, 232, 0.5)"
+      borderRadius="1.6rem"
+    />
   </>
 )
 

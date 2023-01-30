@@ -41,14 +41,16 @@ const Contact = ({
         </Heading>
         <Text lineHeight="20px" color="rgba(10, 10, 10, 0.5)">
           {status && status}
-
-          {song && (
-            <Flex marginLeft="12px" alignItems="center" gap="4px">
-              <Icon as={MdMusicNote} w="18px" h="18px" color="#575a9b" />
-              {song}
-            </Flex>
-          )}
         </Text>
+
+        {song && (
+          <Flex alignItems="center" gap="4px">
+            <Icon as={MdMusicNote} w="18px" h="18px" color="#575a9b" />
+            <Text lineHeight="20px" color="rgba(10, 10, 10, 0.5)">
+              {song}
+            </Text>
+          </Flex>
+        )}
       </Flex>
     </Flex>
 
