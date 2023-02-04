@@ -7,7 +7,7 @@ export type MessagesContainerProps = {
 const MessagesContainer = ({ children }: MessagesContainerProps) => (
   <Flex
     flex="1"
-    backgroundImage="/img/backgroundChat.png"
+    backgroundImage="/img/backgroundChat.jpg"
     backgroundSize="cover"
     backgroundPosition="center"
     backgroundRepeat="no-repeat"

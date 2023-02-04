@@ -1,7 +1,7 @@
 import { KeyboardEvent, useContext, useState } from 'react'
 import { BsFillMicFill } from 'react-icons/bs'
+import { BsFillEmojiWinkFill } from 'react-icons/bs'
 import { IoMdSend } from 'react-icons/io'
-import { MdOutlineEmojiEmotions } from 'react-icons/md'
 
 import { Flex, Input, Icon, Box, Button } from '@chakra-ui/react'
 import { ChatContext } from 'contexts/chatContext'
@@ -89,33 +89,12 @@ const ChatKeyboard = () => {
         alignItems="center"
         justifyContent="center"
         gap="1rem"
+        borderTop="0.1rem solid"
+        borderColor="borderColor"
       >
-        <Flex gap="0.5rem">
-          <Button color="#8C8F94" bg="transparent">
-            <Icon
-              aria-label="Botao gravar audio"
-              as={BsFillMicFill}
-              w="2rem"
-              h="2rem"
-              color={listeningMic ? '#126ECE' : 'inherit'}
-              onClick={handleListeningMic}
-            />
-          </Button>
-
-          <Button color="#8C8F94" bg="transparent">
-            <Icon
-              aria-label="Botao para abrir teclado de emojis"
-              as={MdOutlineEmojiEmotions}
-              w="2rem"
-              h="2rem"
-              onClick={() => setShowEmojiKeyboard((prevState) => !prevState)}
-            />
-          </Button>
-        </Flex>
-
         <Input
           placeholder="Mensagem"
-          bg="#EDF3F5"
+          bg="componentBgColor"
           border="none"
           borderRadius="1rem"
           p="2rem 1.5rem"
@@ -125,17 +104,46 @@ const ChatKeyboard = () => {
           onKeyUp={handleKeyUp}
         />
 
-        <Button bg="transparent">
-          <Icon
-            as={IoMdSend}
-            w="2rem"
-            h="2rem"
-            color="#8C8F94"
-            bg="transparent"
-            aria-label="Botao para enviar mensagem"
-            onClick={handleSendMessage}
-          />
-        </Button>
+        <Flex>
+          <Button color="iconColor" bg="transparent">
+            <Icon
+              aria-label="Botao para abrir teclado de emojis"
+              as={BsFillEmojiWinkFill}
+              w="1.6rem"
+              h="1.6rem"
+              onClick={() => setShowEmojiKeyboard((prevState) => !prevState)}
+            />
+          </Button>
+
+          <Button color="iconColor" bg="transparent">
+            <Icon
+              aria-label="Botao gravar audio"
+              as={BsFillMicFill}
+              w="1.6rem"
+              h="1.6rem"
+              color={listeningMic ? 'variants.darkBlue' : 'inherit'}
+              onClick={handleListeningMic}
+            />
+          </Button>
+
+          <Button
+            bg="iconColor"
+            color="white"
+            borderRadius="50%"
+            w="2.6rem"
+            h="2.6rem"
+            ml={2}
+          >
+            <Icon
+              as={IoMdSend}
+              w="1rem"
+              h="1rem"
+              bg="transparent"
+              aria-label="Botao para enviar mensagem"
+              onClick={handleSendMessage}
+            />
+          </Button>
+        </Flex>
       </Flex>
     </>
   )

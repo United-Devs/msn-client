@@ -22,8 +22,9 @@ type ContextType = {
 
 const initialState: InitialStateType = {
   messages: [
-    { message: 'Olá, como andas? 😁', isFriend: true },
-    { message: 'Com as pernas 👍🏻', isFriend: false }
+    { message: 'hahaha obviously 😎', isFriend: true },
+    { message: '🎧 I like the music you are listening to', isFriend: false },
+    { message: 'my favorite song :)', isFriend: true }
   ]
 }
 
