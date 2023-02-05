@@ -6,15 +6,15 @@ describe('<ChatMessage />', () => {
     render(<ChatKeyboard />)
 
     const micButton = screen.getByRole('button', {
-      name: /botao gravar audio/i
+      name: /botão gravar audio/i
     })
 
     const emojiButton = screen.getByRole('button', {
-      name: /botao para abrir teclado de emojis/i
+      name: /botão para abrir teclado de emojis/i
     })
 
     const sendMessageButton = screen.getByRole('button', {
-      name: /botao para enviar mensagem/i
+      name: /botão para enviar mensagem/i
     })
 
     const emojiKeyboard = screen.queryByLabelText(/Teclado Emoji/i)

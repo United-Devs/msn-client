@@ -1,4 +1,4 @@
-import { createContext, useReducer } from 'react'
+import { createContext, useReducer, ReactNode, Dispatch } from 'react'
 
 import { ChatMessageProps } from 'components/ChatMessage'
 
@@ -12,12 +12,12 @@ type ActionType = {
 }
 
 type ChatProviderProps = {
-  children: React.ReactNode
+  children: ReactNode
 }
 
 type ContextType = {
   state: InitialStateType
-  dispatch: React.Dispatch<ActionType>
+  dispatch: Dispatch<ActionType>
 }
 
 const initialState: InitialStateType = {

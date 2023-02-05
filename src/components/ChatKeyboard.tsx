@@ -1,6 +1,5 @@
 import { KeyboardEvent, useContext, useState } from 'react'
-import { BsFillMicFill } from 'react-icons/bs'
-import { BsFillEmojiWinkFill } from 'react-icons/bs'
+import { BsFillMicFill, BsFillEmojiWinkFill } from 'react-icons/bs'
 import { IoMdSend } from 'react-icons/io'
 
 import { Flex, Input, Icon, Box, Button } from '@chakra-ui/react'
@@ -107,7 +106,7 @@ const ChatKeyboard = () => {
         <Flex>
           <Button color="iconColor" bg="transparent">
             <Icon
-              aria-label="Botao para abrir teclado de emojis"
+              aria-label="Botão para abrir teclado de emojis"
               as={BsFillEmojiWinkFill}
               w="1.6rem"
               h="1.6rem"
@@ -117,7 +116,7 @@ const ChatKeyboard = () => {
 
           <Button color="iconColor" bg="transparent">
             <Icon
-              aria-label="Botao gravar audio"
+              aria-label="Botão gravar audio"
               as={BsFillMicFill}
               w="1.6rem"
               h="1.6rem"
@@ -139,7 +138,7 @@ const ChatKeyboard = () => {
               w="1rem"
               h="1rem"
               bg="transparent"
-              aria-label="Botao para enviar mensagem"
+              aria-label="Botão para enviar mensagem"
               onClick={handleSendMessage}
             />
           </Button>

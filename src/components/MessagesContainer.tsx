@@ -1,7 +1,9 @@
+import { ReactNode } from 'react'
+
 import { Flex, VStack } from '@chakra-ui/react'
 
 export type MessagesContainerProps = {
-  children: React.ReactNode
+  children: ReactNode
 }
 
 const MessagesContainer = ({ children }: MessagesContainerProps) => (
