@@ -15,7 +15,8 @@ const theme = extendTheme({
     iconColor: '#005683',
     borderColor: '#dae4e87f',
     variants: {
-      darkBlue: '#ABE0F5'
+      darkBlue: '#ABE0F5',
+      lightBlue: '#3BB2EA'
     }
   },
   components: {

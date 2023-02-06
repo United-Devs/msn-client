@@ -1,5 +1,5 @@
 import { KeyboardEvent, useContext, useState } from 'react'
-import { BsFillMicFill, BsFillEmojiWinkFill } from 'react-icons/bs'
+import { BsFillMicFill, BsFillEmojiSmileFill } from 'react-icons/bs'
 import { IoMdSend } from 'react-icons/io'
 
 import { Flex, Input, Icon, Box, Button } from '@chakra-ui/react'
@@ -107,7 +107,7 @@ const ChatKeyboard = () => {
           <Button color="iconColor" bg="transparent">
             <Icon
               aria-label="Botão para abrir teclado de emojis"
-              as={BsFillEmojiWinkFill}
+              as={BsFillEmojiSmileFill}
               w="1.6rem"
               h="1.6rem"
               onClick={() => setShowEmojiKeyboard((prevState) => !prevState)}
@@ -132,6 +132,9 @@ const ChatKeyboard = () => {
             w="2.6rem"
             h="2.6rem"
             ml={2}
+            _hover={{
+              backgroundColor: 'lightBlue'
+            }}
           >
             <Icon
               as={IoMdSend}
