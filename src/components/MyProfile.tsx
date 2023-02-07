@@ -1,6 +1,8 @@
-import { FaCog } from 'react-icons/fa'
+import { BiLogOut } from 'react-icons/bi'
 
 import { Avatar, Icon, Flex, Heading, Text, Box } from '@chakra-ui/react'
+
+import Status from './Status'
 
 const MyProfile = () => (
   <>
@@ -10,16 +12,18 @@ const MyProfile = () => (
       alignItems="center"
       bg="#FDFEFF"
       gap="0.8rem"
-      // border="1px solid rgba(218, 228, 232, 0.5)"
-      // borderRadius="16px"
     >
       <Flex gap="1.4rem" alignItems="center">
-        <Avatar
-          w="5.6rem"
-          h="5.6rem"
-          name="Milena Almeida"
-          src="https://github.com/milealmeida.png"
-        />
+        <Flex position="relative">
+          <Avatar
+            w="5.6rem"
+            h="5.6rem"
+            name="Milena Almeida"
+            src="https://github.com/milealmeida.png"
+          />
+
+          <Status status="offline" />
+        </Flex>
 
         <Flex gap="0.4rem" color="black" flexDir="column">
           <Heading
@@ -40,8 +44,8 @@ const MyProfile = () => (
         </Flex>
       </Flex>
 
-      <Flex>
-        <Icon as={FaCog} w="2.4rem" h="2.4rem" color="#005683" />
+      <Flex transform="rotate(180deg)" cursor="pointer">
+        <Icon as={BiLogOut} w="2.4rem" h="2.4rem" color="#005683" />
       </Flex>
     </Flex>
     <Box

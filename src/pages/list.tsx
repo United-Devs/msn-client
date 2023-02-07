@@ -1,52 +1,104 @@
-import { Heading } from '@chakra-ui/react'
+import { useState } from 'react'
+import { BiChevronDown, BiChevronUp } from 'react-icons/bi'
+
+import { Box, Collapse, Flex, Heading, Icon } from '@chakra-ui/react'
 import Contact from 'components/Contact'
 import MyProfile from 'components/MyProfile'
+import { listActive, listOff } from 'mocks/list'
 
-const List = () => (
-  <>
-    <MyProfile />
-    <Heading
-      p="16px 24px"
-      fontWeight={700}
-      fontSize="16px"
-      lineHeight="24px"
-      color="#0A0A0A"
-    >
-      Contatos
-    </Heading>
-    <Contact
-      name="Marcos Mendes"
-      src="https://github.com/iamdevmarcos.png"
-      status="Não ligo para a sua presença"
-      notification={8}
-      alert
-    />
+const List = () => {
+  const [showOnline, setShowOnline] = useState(true)
+  const [showOffline, setShowOffline] = useState(true)
 
-    <Contact
-      name="Bruno Cesar Nunes"
-      src="https://github.com/BrunoNunes96.png"
-      song="Bruto Rústico e Sistemático - João Carreiro & Capataz"
-    />
+  const handleToggleOnline = () => setShowOnline(!showOnline)
+  const handleToggleOffline = () => setShowOffline(!showOffline)
 
-    <Contact
-      name="Clayton Rafael"
-      src="https://github.com/Claytonrss.png"
-      status="MSD Forever S2"
-      notification={2}
-    />
+  return (
+    <Box backgroundColor="#f0f8ff" height="100vh">
+      <Flex
+        flexDir="column"
+        maxWidth="50rem"
+        marginInline="auto"
+        backgroundColor="#ffffff"
+        h="100%"
+      >
+        <MyProfile />
 
-    <Contact
-      name="Anderson Santana"
-      src="https://github.com/ander0308.png"
-      status="I Hate Design"
-    />
+        <Box>
+          <Heading
+            cursor="pointer"
+            onClick={handleToggleOnline}
+            display="flex"
+            alignItems="center"
+            gap="1.6rem"
+            p="1.6rem 2.4rem"
+            fontWeight={700}
+            fontSize="1.6rem"
+            lineHeight="2.4rem"
+            color="#0A0A0A"
+          >
+            online
+            <Icon
+              as={showOnline ? BiChevronUp : BiChevronDown}
+              w={12}
+              h={12}
+              color="#005683"
+            />
+          </Heading>
 
-    <Contact
-      name="Daniel Gaias Malagurti"
-      src="https://github.com/Malagurti.png"
-      song="Highway to Hell - AC/DC"
-    />
-  </>
-)
+          <Collapse in={showOnline}>
+            {listActive.map((item) => (
+              <Contact
+                key={item.id}
+                status={item.status}
+                notification={item.notification}
+                alert={item.alert}
+                name={item.name}
+                src={item.src}
+                statusText={item.statusText}
+                song={item.song}
+              />
+            ))}
+          </Collapse>
+        </Box>
+
+        <Box>
+          <Heading
+            cursor="pointer"
+            onClick={handleToggleOffline}
+            display="flex"
+            alignItems="center"
+            gap="1.6rem"
+            p="1.6rem 2.4rem"
+            fontWeight={700}
+            fontSize="1.6rem"
+            lineHeight="2.4rem"
+            color="#0A0A0A"
+          >
+            offline
+            <Icon
+              as={showOffline ? BiChevronUp : BiChevronDown}
+              w={12}
+              h={12}
+              color="#005683"
+            />
+          </Heading>
+
+          <Collapse in={showOffline}>
+            {listOff.map((item) => (
+              <Contact
+                key={item.id}
+                name={item.name}
+                src={item.src}
+                statusText={item.statusText}
+                song={item.song}
+              />
+            ))}
+          </Collapse>
+        </Box>
+      </Flex>
+    </Box>
+  )
+}
 
 export default List
