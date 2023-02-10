@@ -5,24 +5,27 @@ const Login = () => {
     <Flex
       width="100%"
       maxWidth="39rem"
+      height="80vh"
       margin="0 auto"
       flexDirection="column"
       gap="1rem"
       padding="1.5rem"
+      backgroundColor="#D8F3FF"
     >
       <Image
-        src="/img/msn-logo.png"
+        src="/img/new-logo.svg"
         display="flex"
         alignSelf="center"
-        mb="3rem"
+        mt="5.4rem"
+        mb="7.2rem"
       />
 
-      <Text fontSize="2.4rem" fontWeight="bold" lineHeight="2.4rem" mb="2.4rem">
-        Bem vindo de volta!
+      <Text fontSize="3.2rem" fontWeight="bold" lineHeight="2.4rem" mb="1.6rem">
+        Seja bem vindo!
       </Text>
 
-      <Text fontSize="1.4rem" fontWeight="bold">
-        E-mail
+      <Text fontSize="1.6rem" fontWeight="bold">
+        Usuário:
       </Text>
       <Input
         placeholder="Digite seu e-mail"
@@ -31,63 +34,33 @@ const Login = () => {
         padding="1.6rem 2.4rem"
         backgroundColor="#EDF3F5"
         height="4.8rem"
-        borderRadius="3rem"
+        borderRadius="0.8rem"
       />
-
-      <Text fontSize="1.4rem" fontWeight="bold">
-        Senha
-      </Text>
-      <Input
-        placeholder="Digite sua senha"
-        border="transparent"
-        fontSize="1.4rem"
-        padding="1.6rem 2.4rem"
-        backgroundColor="#EDF3F5"
-        height="4.8rem"
-        borderRadius="3rem"
-      />
-      <Link
-        href="#"
-        fontSize="1.4rem"
-        fontWeight="bold"
-        lineHeight="2.4rem"
-        color="#005683"
-        mt="1.6rem"
-      >
-        Esqueceu a senha?
-      </Link>
       <Button
         colorScheme="blue"
         height="4.8rem"
-        borderRadius="3rem"
+        borderRadius="0.8rem"
         size="lg"
         backgroundColor="#005683"
         width="100%"
-        fontSize="1.4rem"
+        fontSize="1.6rem"
         padding="1.6rem 2.4rem"
-        mt="2.4rem"
+        mt="1rem"
       >
         Entrar
       </Button>
-      <Text
+      <Link
+        href="#"
         fontSize="1.4rem"
+        fontWeight="600"
         lineHeight="2.4rem"
-        mt="7rem"
-        display="flex"
-        alignSelf="center"
+        color="#000"
+        mt="7.2rem"
+        textAlign="center"
+        textUnderlineOffset="0.8rem"
       >
-        Não tem uma conta?
-        <Link
-          href="#"
-          fontSize="1.4rem"
-          fontWeight="bold"
-          lineHeight="2.4rem"
-          color="#005683"
-          ml="0.4rem"
-        >
-          Crie uma.
-        </Link>
-      </Text>
+        Conheça o projeto 😀
+      </Link>
     </Flex>
   )
 }

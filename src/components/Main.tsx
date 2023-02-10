@@ -8,8 +8,8 @@ const Main = () => {
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
-      background="url(./img/bg-waves.png) no-repeat"
       backgroundPosition="50% 0%"
+      backgroundColor="#D8F3FF"
     >
       <Login />
     </Flex>
