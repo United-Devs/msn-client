@@ -11,7 +11,7 @@ export type ContactProps = {
   song?: string
   notification?: number
   alert?: boolean
-  status?: string | undefined
+  status?: string
 }
 
 const Contact = ({
@@ -29,7 +29,7 @@ const Contact = ({
     border="0.1rem solid rgba(216, 243, 255, 0.5)"
     justifyContent="space-between"
     alignItems="center"
-    backgroundColor={notification ? '#D8F3FF' : '#fafeff'}
+    backgroundColor={notification ? 'bgBlue' : 'bgColorSecondary'}
   >
     <Flex gap="0.9rem">
       <Flex position="relative">
@@ -42,7 +42,7 @@ const Contact = ({
           fontWeight={500}
           fontSize="1.4rem"
           lineHeight="2.2rem"
-          color="#0A0A0A"
+          color="textColor"
         >
           {name}
         </Heading>
@@ -52,7 +52,7 @@ const Contact = ({
 
         {song && (
           <Flex alignItems="center" gap="0.4rem">
-            <Icon as={BiMusic} w="1.8rem" h="1.8rem" color="#575a9b" />
+            <Icon as={BiMusic} w="1.8rem" h="1.8rem" color="darkPurple" />
             <Text lineHeight="2rem" color="rgba(10, 10, 10, 0.5)">
               {song}
             </Text>
@@ -66,9 +66,9 @@ const Contact = ({
         <Text
           h="2.4rem"
           p="0.2rem 1.2rem"
-          bg="#3BB2EA"
+          bg="variants.lightBlue"
           borderRadius="5rem"
-          color="#FDFEFF"
+          color="bgColor"
           fontWeight={600}
           fontSize="1.2rem"
           lineHeight="2rem"
@@ -78,8 +78,8 @@ const Contact = ({
       )}
 
       {alert && (
-        <Flex bg="#FF3A45" borderRadius="50%" p="0.4rem">
-          <Icon as={BiBell} color="#fff" w="1.6rem" h="1.6rem" />
+        <Flex bg="red" borderRadius="50%" p="0.4rem">
+          <Icon as={BiBell} color="white" w="1.6rem" h="1.6rem" />
         </Flex>
       )}
     </Flex>

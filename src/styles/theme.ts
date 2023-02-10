@@ -8,7 +8,13 @@ const Button = defineStyleConfig({
 
 const theme = extendTheme({
   colors: {
+    white: '#ffffff',
+    red: '#F83737',
+    greenDark: '#33FF2F',
     bgColor: '#FDFEFF',
+    darkPurple: '#575a9b',
+    lightGray: '#e9f9ff',
+    bgBlue: '#D8F3FF',
     bgColorSecondary: '#FAFEFF',
     textColor: '#0A0A0A',
     componentBgColor: '#EDF3F5',

@@ -10,8 +10,8 @@ const List = () => {
   const [showOnline, setShowOnline] = useState(true)
   const [showOffline, setShowOffline] = useState(true)
 
-  const handleToggleOnline = () => setShowOnline(!showOnline)
-  const handleToggleOffline = () => setShowOffline(!showOffline)
+  const handleToggleOnline = () => setShowOnline((prevState) => !prevState)
+  const handleToggleOffline = () => setShowOffline((prevState) => !prevState)
 
   return (
     <Box backgroundColor="#f0f8ff" height="100vh">
@@ -19,7 +19,7 @@ const List = () => {
         flexDir="column"
         maxWidth="50rem"
         marginInline="auto"
-        backgroundColor="#ffffff"
+        backgroundColor="white"
         h="100%"
       >
         <MyProfile />
