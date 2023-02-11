@@ -52,7 +52,7 @@ const Login = () => {
       <Link
         href="#"
         fontSize="1.4rem"
-        fontWeight="600"
+        fontWeight={600}
         lineHeight="2.4rem"
         color="#000"
         mt="7.2rem"
