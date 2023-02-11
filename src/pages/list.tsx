@@ -14,7 +14,7 @@ const List = () => {
   const handleToggleOffline = () => setShowOffline((prevState) => !prevState)
 
   return (
-    <Box backgroundColor="#f0f8ff" height="100vh">
+    <Box backgroundColor="bgList" height="100vh">
       <Flex
         flexDir="column"
         maxWidth="50rem"
@@ -35,14 +35,14 @@ const List = () => {
             fontWeight={700}
             fontSize="1.6rem"
             lineHeight="2.4rem"
-            color="#0A0A0A"
+            color="textColor"
           >
             online
             <Icon
               as={showOnline ? BiChevronUp : BiChevronDown}
               w={12}
               h={12}
-              color="#005683"
+              color="iconColor"
             />
           </Heading>
 
@@ -73,14 +73,14 @@ const List = () => {
             fontWeight={700}
             fontSize="1.6rem"
             lineHeight="2.4rem"
-            color="#0A0A0A"
+            color="textColor"
           >
             offline
             <Icon
               as={showOffline ? BiChevronUp : BiChevronDown}
               w={12}
               h={12}
-              color="#005683"
+              color="iconColor"
             />
           </Heading>
 

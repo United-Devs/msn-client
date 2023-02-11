@@ -8,6 +8,7 @@ const Button = defineStyleConfig({
 
 const theme = extendTheme({
   colors: {
+    bgList: '#f0f8ff',
     white: '#ffffff',
     red: '#F83737',
     greenDark: '#33FF2F',

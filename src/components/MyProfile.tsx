@@ -10,7 +10,7 @@ const MyProfile = () => (
       justifyContent="space-between"
       p="2.4rem 2.6rem"
       alignItems="center"
-      bg="#FDFEFF"
+      bg="bgColor"
       gap="0.8rem"
     >
       <Flex gap="1.4rem" alignItems="center">
@@ -28,7 +28,7 @@ const MyProfile = () => (
         <Flex gap="0.4rem" color="black" flexDir="column">
           <Heading
             fontSize="1.6rem"
-            color="#0A0A0A"
+            color="textColor"
             fontWeight={700}
             lineHeight="2.4rem"
           >
@@ -45,7 +45,7 @@ const MyProfile = () => (
       </Flex>
 
       <Flex transform="rotate(180deg)" cursor="pointer">
-        <Icon as={BiLogOut} w="2.4rem" h="2.4rem" color="#005683" />
+        <Icon as={BiLogOut} w="2.4rem" h="2.4rem" color="iconColor" />
       </Flex>
     </Flex>
     <Box
