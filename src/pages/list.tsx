@@ -4,8 +4,7 @@ import { BiChevronDown, BiChevronUp } from 'react-icons/bi'
 import Link from 'next/link'
 
 import { Box, Collapse, Flex, Heading, Icon } from '@chakra-ui/react'
-import Contact from 'components/Contact'
-import MyProfile from 'components/MyProfile'
+import { Contact, MyProfile } from 'components'
 import { chatList } from 'mocks/list'
 
 const List = () => {

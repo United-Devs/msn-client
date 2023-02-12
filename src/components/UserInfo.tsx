@@ -6,13 +6,13 @@ import { Flex, Center, Icon, Text, Avatar, Heading } from '@chakra-ui/react'
 
 import Status from './Status'
 
-export type ProfileProps = {
+export type UserInfoProps = {
   name: string
   status: string
   photo?: string
 }
 
-const Profile = ({ name, status, photo }: ProfileProps) => {
+const UserInfo = ({ name, status, photo }: UserInfoProps) => {
   const defaultImgPath = 'img/defaultProfile.jpg'
 
   return (
@@ -73,4 +73,4 @@ const Profile = ({ name, status, photo }: ProfileProps) => {
   )
 }
 
-export default Profile
+export default UserInfo

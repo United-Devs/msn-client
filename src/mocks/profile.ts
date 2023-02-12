@@ -1,4 +1,4 @@
-import type { ProfileProps } from 'components/Profile'
+import type { ProfileProps } from 'components/UserInfo'
 
 export const profileMock: ProfileProps = {
   name: 'Jane Doe',
