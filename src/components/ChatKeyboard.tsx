@@ -94,6 +94,7 @@ const ChatKeyboard = () => {
         <Input
           placeholder="Mensagem"
           bg="componentBgColor"
+          color="black"
           border="none"
           borderRadius="1rem"
           p="2rem 1.5rem"

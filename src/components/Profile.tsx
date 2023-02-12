@@ -4,6 +4,8 @@ import Link from 'next/link'
 
 import { Flex, Center, Icon, Text, Avatar, Heading } from '@chakra-ui/react'
 
+import Status from './Status'
+
 export type ProfileProps = {
   name: string
   status: string
@@ -23,7 +25,7 @@ const Profile = ({ name, status, photo }: ProfileProps) => {
       borderBottom="0.1rem solid"
       borderColor="borderColor"
     >
-      <Link href="/">
+      <Link href="/list">
         <Center
           as="button"
           aria-label="Icone de uma seta para a esquerda"
@@ -37,12 +39,16 @@ const Profile = ({ name, status, photo }: ProfileProps) => {
       </Link>
 
       <Flex gap="1.4rem" alignItems="center">
-        <Avatar
-          w="5.6rem"
-          h="5.6rem"
-          name={name}
-          src={photo ?? defaultImgPath}
-        />
+        <Flex position="relative">
+          <Avatar
+            w="5.6rem"
+            h="5.6rem"
+            name={name}
+            src={photo ?? defaultImgPath}
+          />
+
+          <Status status={status} />
+        </Flex>
 
         <Flex gap="0.4rem" color="black" flexDir="column">
           <Heading

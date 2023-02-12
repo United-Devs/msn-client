@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi'
 
+import Link from 'next/link'
+
 import { Box, Collapse, Flex, Heading, Icon } from '@chakra-ui/react'
 import Contact from 'components/Contact'
 import MyProfile from 'components/MyProfile'
-import { listActive, listOff } from 'mocks/list'
+import { chatList } from 'mocks/list'
 
 const List = () => {
   const [showOnline, setShowOnline] = useState(true)
@@ -12,6 +14,9 @@ const List = () => {
 
   const handleToggleOnline = () => setShowOnline((prevState) => !prevState)
   const handleToggleOffline = () => setShowOffline((prevState) => !prevState)
+
+  const listActive = chatList.filter((user) => user.status === 'online')
+  const listOff = chatList.filter((user) => user.status === 'offline')
 
   return (
     <Box backgroundColor="bgList" height="100vh">
@@ -48,16 +53,17 @@ const List = () => {
 
           <Collapse in={showOnline}>
             {listActive.map((item) => (
-              <Contact
-                key={item.id}
-                status={item.status}
-                notification={item.notification}
-                alert={item.alert}
-                name={item.name}
-                src={item.src}
-                statusText={item.statusText}
-                song={item.song}
-              />
+              <Link href={`/chat/${item.id}`} key={item.id}>
+                <Contact
+                  status={item.status}
+                  notification={item.notification}
+                  alert={item.alert}
+                  name={item.name}
+                  src={item.src}
+                  statusText={item.statusText}
+                  song={item.song}
+                />
+              </Link>
             ))}
           </Collapse>
         </Box>
@@ -86,13 +92,15 @@ const List = () => {
 
           <Collapse in={showOffline}>
             {listOff.map((item) => (
-              <Contact
-                key={item.id}
-                name={item.name}
-                src={item.src}
-                statusText={item.statusText}
-                song={item.song}
-              />
+              <Link href={`/chat/${item.id}`} key={item.id}>
+                <Contact
+                  key={item.id}
+                  name={item.name}
+                  src={item.src}
+                  statusText={item.statusText}
+                  song={item.song}
+                />
+              </Link>
             ))}
           </Collapse>
         </Box>
