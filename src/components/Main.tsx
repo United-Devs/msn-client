@@ -1,16 +1,17 @@
-import { Flex, Text } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
+import Login from 'components/Login'
 
 const Main = () => {
   return (
     <Flex
-      bg="aliceblue"
       minH="100vh"
       alignItems="center"
       justifyContent="center"
+      flexDirection="column"
+      backgroundPosition="50% 0%"
+      backgroundColor="#D8F3FF"
     >
-      <Text fontSize="4rem" fontWeight="semibold">
-        Next.js + Chakra UI
-      </Text>
+      <Login />
     </Flex>
   )
 }

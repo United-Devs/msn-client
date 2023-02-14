@@ -10,6 +10,7 @@ const theme = extendTheme({
   colors: {
     bgList: '#f0f8ff',
     white: '#ffffff',
+    black: '#000000',
     red: '#F83737',
     greenDark: '#33FF2F',
     bgColor: '#FDFEFF',
