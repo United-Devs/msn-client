@@ -10,7 +10,7 @@ const Login = () => {
       flexDirection="column"
       gap="1rem"
       padding="1.5rem"
-      backgroundColor="#D8F3FF"
+      backgroundColor="bgBlue"
     >
       <Image
         src="/img/new-logo.svg"
@@ -32,29 +32,32 @@ const Login = () => {
         border="transparent"
         fontSize="1.4rem"
         padding="1.6rem 2.4rem"
-        backgroundColor="#EDF3F5"
+        backgroundColor="componentBgColor"
         height="4.8rem"
         borderRadius="0.8rem"
       />
-      <Button
-        colorScheme="blue"
-        height="4.8rem"
-        borderRadius="0.8rem"
-        size="lg"
-        backgroundColor="#005683"
-        width="100%"
-        fontSize="1.6rem"
-        padding="1.6rem 2.4rem"
-        mt="1rem"
-      >
-        Entrar
-      </Button>
+      <Link href="/list" _hover={{ textDecoration: 'none' }}>
+        <Button
+          colorScheme="blue"
+          height="4.8rem"
+          borderRadius="0.8rem"
+          size="lg"
+          backgroundColor="iconColor"
+          width="100%"
+          fontSize="1.6rem"
+          padding="1.6rem 2.4rem"
+          mt="1rem"
+        >
+          Entrar
+        </Button>
+      </Link>
       <Link
-        href="#"
+        href="https://github.com/United-Devs/msn-client"
+        isExternal
         fontSize="1.4rem"
         fontWeight={600}
         lineHeight="2.4rem"
-        color="#000"
+        color="black"
         mt="7.2rem"
         textAlign="center"
         textUnderlineOffset="0.8rem"
