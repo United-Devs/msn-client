@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { fireEvent, render, screen } from '@testing-library/react'
-import Profile from 'components/Profile'
+import Profile from 'components/UserInfo'
 import { profileMock } from 'mocks/profile'
 
 describe.skip('<Profile />', () => {
