@@ -1,10 +1,18 @@
-import { Button, Flex, Input, Text, Link, Image } from '@chakra-ui/react'
+import Link from 'next/link'
+
+import {
+  Button,
+  Flex,
+  Input,
+  Text,
+  Link as ChakraLink,
+  Image
+} from '@chakra-ui/react'
 
 const Login = () => {
   return (
     <Flex
       width="100%"
-      maxWidth="39rem"
       height="80vh"
       margin="0 auto"
       flexDirection="column"
@@ -36,7 +44,7 @@ const Login = () => {
         height="4.8rem"
         borderRadius="0.8rem"
       />
-      <Link href="/list" _hover={{ textDecoration: 'none' }}>
+      <Link href="/list">
         <Button
           colorScheme="blue"
           height="4.8rem"
@@ -51,19 +59,32 @@ const Login = () => {
           Entrar
         </Button>
       </Link>
-      <Link
-        href="https://github.com/United-Devs/msn-client"
-        isExternal
-        fontSize="1.4rem"
-        fontWeight={600}
-        lineHeight="2.4rem"
-        color="black"
-        mt="7.2rem"
-        textAlign="center"
-        textUnderlineOffset="0.8rem"
-      >
-        Conheça o projeto 😀
-      </Link>
+
+      <Flex flexDir="column" justifyContent="center" gap="1rem" mt="5rem">
+        <ChakraLink
+          href="https://github.com/United-Devs/msn-client"
+          isExternal
+          fontSize="1.4rem"
+          fontWeight={600}
+          lineHeight="2.4rem"
+          color="black"
+          textAlign="center"
+          textUnderlineOffset="0.8rem"
+        >
+          Conheça o projeto
+        </ChakraLink>
+
+        <Text
+          fontSize="1.4rem"
+          fontWeight={600}
+          lineHeight="2.4rem"
+          color="black"
+          textAlign="center"
+          textUnderlineOffset="0.8rem"
+        >
+          <Link href="/privacy-policy">Política de Privacidade</Link>
+        </Text>
+      </Flex>
     </Flex>
   )
 }
